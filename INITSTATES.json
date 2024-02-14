@@ -1,0 +1,28 @@
+[
+{
+    "name": "Brandubh",
+    "size": 7,
+    "escape": [0, 6, 42, 49],
+    "center": 24,
+    "init_state": {
+      "ID": "0",
+      "white": [17, 23, 25, 31],
+      "black": [4, 11, 21, 22, 26, 27, 39, 46],
+      "king": 24,
+      "gamer": 0
+    }
+},
+{
+  "name": "Placeholder",
+  "size": 7,
+  "escape": [0, 6, 42, 49],
+  "center": 24,
+  "init_state": {
+    "ID": "0",
+    "white": [17, 23, 25, 31],
+    "black": [4, 11, 21, 22, 26, 27, 39, 46],
+    "king": 24,
+    "gamer": 0
+  }
+}
+]
