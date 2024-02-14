@@ -42,7 +42,7 @@ class Board:
             self.state.ID = self.hash_state(self.state)
             self.five_move.append(self.state.ID)
 
-    def init_state(self, type_game):
+    def init_state(self, type_game)
         """
         Method to initialize the  state of the board 
         default type is (Brandubh) )
@@ -56,6 +56,9 @@ class Board:
             sys.exit(1)
         # create the hash of the state and set it to the state
         self.state.ID = type_game+"-"+self.hash_state(self.state)    
+        self.state.to_JSON()
+
+        
 
 
     def create_state(self, type_game, white, black, king, gamer):
@@ -67,6 +70,7 @@ class Board:
             self.five_move.pop(0)
         self.state.ID = type_game+"-"+self.hash_state(self.state)
         self.five_move.append(self.state.ID)
+        self.state.to_JSON()
 
 
     def human_representation(self):
@@ -128,7 +132,7 @@ class Board:
         """
         Function to return the hash of the state in md5
         """
-        return md5((state.to_JSON()).encode('utf-8')).hexdigest()
+        return md5((state.to_JSON_noID()).encode('utf-8')).hexdigest()
     
     def winner(winnerValue):
         """

@@ -70,13 +70,26 @@ class State:
         }
         return json.dumps(state_dict)
     
+    
+    def to_JSON_noID(self):
+        """
+        Method to return a JSON string representation of the state
+        """
+        state_dict = {
+            'white': self.white,
+            'black': self.black,
+            'king': self.king,
+            'gamer': self.gamer
+        }
+        return json.dumps(state_dict)
+    
     @classmethod
     def from_JSON(cls, json_str):
         """
         Class method to create a State object from a JSON string
         """
         state_dict = json.loads(json_str)
-        return cls(state_dict['white'], state_dict['black'], state_dict['king'], state_dict['gamer'])
+        return cls(state_dict['ID'],state_dict['white'], state_dict['black'], state_dict['king'], state_dict['gamer'])
 
 
     def save_to_file(self, filename):
