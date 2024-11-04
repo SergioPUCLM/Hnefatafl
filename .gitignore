@@ -1,0 +1,3 @@
+# Ignore all files ending in ".рус"
+*.рус
+./src/__pycache__/*
